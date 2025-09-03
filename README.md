@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 # DAY-1
 
 - Setup vite app (React+Typescript)
@@ -13,3 +7,9 @@
 - Body
 - Fetch the swiggy Restaurant Api
 - show all Restaurant in body
+
+
+# DAY-2
+
+- Setup routing for diffrent page
+- Footer

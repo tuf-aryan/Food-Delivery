@@ -1,3 +1,4 @@
+import { useNavigate} from "react-router";
 import { RESIMG } from "../utils/constant";
 
 type Info ={
@@ -9,13 +10,20 @@ type Info ={
 }
 
 const RestaurantCard = ({info}:{info:Info}) =>{
-    const {name,cuisines,costForTwo,cloudinaryImageId} = info;
+    const navigate = useNavigate();
+    const {name,cuisines,costForTwo,cloudinaryImageId,id} = info;
+
+    const handleMenu = () =>{
+        navigate('/restaurant/'+id);
+    }
     return (
-        <div className="p-4 border bg-[#FFA500] h-78 w-72">
+        <div className="p-4 border bg-[#FFA500] h-78 w-72 relative" onClick={handleMenu}>
+             <h1 className="p-2 bg-purple-800 text-white w-16 h-8 absolute">ADD➕</h1>
             <div>
                 <img src={RESIMG+cloudinaryImageId} className="w-72 h-44"></img>
             </div>
             <div>
+               
                 <h1>{name}</h1>
                 <p>{cuisines.toString()}</p>
                 <p>{costForTwo}</p>
