@@ -13,3 +13,4 @@
 
 - Setup routing for diffrent page
 - Footer
+- setUp redux Store and learn how typescript work with redux....

@@ -7,6 +7,8 @@ import About from './components/About.tsx'
 import Body from './components/Body.tsx'
 import Contact from './components/Contact.tsx'
 import Menu from './components/Menu.tsx'
+import { Provider } from 'react-redux'
+import store from './utils/store.ts'
 
 const router = createBrowserRouter([
   {
@@ -30,7 +32,9 @@ const router = createBrowserRouter([
 ])
 
 createRoot(document.getElementById('root')!).render(
+  <Provider store={store}>
   <StrictMode>
     <RouterProvider router={router}/>
   </StrictMode>,
+  </Provider>
 )

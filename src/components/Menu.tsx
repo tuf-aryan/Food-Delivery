@@ -1,9 +1,18 @@
-import { useParams } from "react-router";
+// import { useSelector } from "react-redux";
+
+// type Info ={
+//     name:string;
+//     cuisines:string[],
+//     id:string;
+//     costForTwo:string;
+//     cloudinaryImageId:string
+// }
 
 
 const Menu = () =>{
-    const resId = useParams();
-    console.log(resId);
+  
+
+    
     return (
   <div>
 
