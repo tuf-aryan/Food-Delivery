@@ -28,7 +28,7 @@ const Body = () => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [listOfRes]);
 
   if (listOfRes.length === 0) return <Shimmer />;
   return (

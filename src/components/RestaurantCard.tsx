@@ -1,7 +1,7 @@
 import { useNavigate} from "react-router";
 import { RESIMG } from "../utils/constant";
 import { useDispatch } from "react-redux";
-import { addItem } from "../utils/menuSlice";
+import { addItem, removeItem } from "../utils/menuSlice";
 
 type Info ={
     name:string;
@@ -17,6 +17,7 @@ const RestaurantCard = ({info}:{info:Info}) =>{
     const {name,cuisines,costForTwo,cloudinaryImageId,id} = info;
 
     const handleMenu = () =>{
+        dispatch(removeItem());
         dispatch(addItem(info));
         navigate('/restaurant/'+id);
     }
